@@ -1,0 +1,101 @@
+body {
+	font-weight: bolder;
+	font-family:  Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+
+header{
+	background-color: beige;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+footer {
+	background-color: beige;
+}
+
+
+nav {
+	text-align: center;
+}
+
+
+#logo {
+	font-weight: bolder;
+	padding: 3px 20px 30px 60px;
+	color: gray;
+}
+
+
+footer {
+	color: gray;
+	font-weight: normal;
+	padding: 500px 0 200px 500px;
+}
+
+nav a {
+	color: gray;
+	
+}
+
+a {
+	text-decoration: none;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 10px 20px 0 20px;
+	display: inline-flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+}
+
+img {
+	width: 100%;
+}
+
+
+#delivered {
+	display: block;
+    text-align: center;
+}
+
+
+div.common input{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.common {
+	display: block;
+    text-align: center;
+}
+
+#profile {
+	padding: 20px 30px 20px 40px;
+}
+
+
+.parcelDelivery {
+	padding: 20px 30px 20px 40px;
+}
+
+
+
+
+
+
+
+
+
+
