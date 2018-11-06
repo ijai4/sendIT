@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Edit</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<header>
+		<a href="index.html" >
+			<h1 id="logo">SENDIT</h1>
+		</a>
+		<nav>
+			<ul>
+				<li><a href="profile.html">Admin Profile</a></li>
+			</ul>
+			<ul>
+				<li><a href="index.html">Sign Out</a></li>
+			</ul>
+		</nav> 
+	</header>
+	<div class="common">
+		<h1>Admin</h1>
+
+		<form>
+			<label for="destinationA">Change Status:</label>
+			<input list="status" id="destinationA" name="destinationA">
+
+			<datalist id="status">
+				<option value="In Transit">
+				<option value="Delivered">
+			</datalist>
+
+			<label for="destinationB">Change Present Location:</label>
+			<input type="text" id="destinationB" name="destinationB" placeholder="present location" required><br>
+
+			<input type="submit" name="submit" value="submit">
+		</form>
+	</div>
+	
+	<footer class="foot">
+			<a href="index.html">Home</a> | <a href="">About</a> | <a href="">Services</a> | <a href="">Contact</a><br />
+			&copy; 2018 SENDIT. All Rights Reserved.
+	</footer>
+</body>
+</html>

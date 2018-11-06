@@ -13,10 +13,15 @@ header{
 }
 
 
+h1 {
+	color: #ccc;
+}
+
+
 footer {
 	background-color: beige;
 }
-
+ 
 
 nav {
 	text-align: center;
@@ -33,7 +38,17 @@ nav {
 footer {
 	color: gray;
 	font-weight: normal;
-	padding: 500px 0 200px 500px;
+	padding: 50px 0 20px 50px;
+	text-align: center;
+}
+
+
+.foot {
+	margin-top: 130px;
+}
+
+#detailsFoot {
+	margin: 300px 0 0 0;
 }
 
 nav a {
@@ -54,7 +69,7 @@ nav ul {
 
 }
 
-img {
+#wrapper img  {
 	width: 100%;
 }
 
@@ -65,8 +80,8 @@ img {
 }
 
 
-div.common input{
-    width: 50%;
+.common input{
+    width: 30%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -75,14 +90,25 @@ div.common input{
     box-sizing: border-box;
 }
 
+form label{
+	display: block;
+	padding-top: 20px;
+}
+
+
+#create {
+	margin: 20px 0 0 0;
+}
+
 
 .common {
 	display: block;
     text-align: center;
 }
 
-#profile {
+.profile {
 	padding: 20px 30px 20px 40px;
+	text-align: center;
 }
 
 
@@ -91,11 +117,29 @@ div.common input{
 }
 
 
+#gallery  {
+	display: flex;	
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
 
+.trio img {
+	width: 300px;
+}
 
+.trio figure{
+	border: 1px solid #ddd;
+	border-radius: 7px;
+	padding: 5px;
+	text-align: center;
+	font-size: smaller;
+}
 
-
-
-
-
-
+#welcome p {
+	text-align: center;
+	font-family: "Courier New", Courier, monospace
+	font-size: xx-large;
+	padding: 15px 10px;
+	color: gold;
+}
