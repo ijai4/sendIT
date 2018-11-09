@@ -1,0 +1,38 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/ --require @babel/register",
+    "build": "babel app.js -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ijai4/sendIT.git"
+  },
+  "author": "Ijai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ijai4/sendIT/issues"
+  },
+  "homepage": "https://github.com/ijai4/sendIT#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "moment": "^2.22.2",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.1.5",
+    "@babel/register": "^7.0.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0",
+    "supertest": "^3.3.0"
+  }
+}
