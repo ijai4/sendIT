@@ -25,7 +25,17 @@ describe('Test routes', () => {
 		});
 	});
 
-	
+	describe ('GET routes', () => {
+		it ('should return success code 200', () => {
+			return request(app).get('/api/v1/parcels')
+			.then((res) => {
+				expect(res.statusCode).to.equal(200);
+			})
+			.catch((err) => {
+				expect(err.statusCode).to.equal(404);
+			});
+		});
+	});
 	
 });
 
