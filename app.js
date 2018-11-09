@@ -31,6 +31,9 @@ app.post('/api/v1/parcels', (req, res) => {
 	return res.status(201).send(parcel);
 });
 
+app.get('/api/v1/parcels', (req, res) => {
+	res.status(200).send(parcels);
+}); 
 
 app.listen(port, () => {
 	console.log('app is listening on', port);
