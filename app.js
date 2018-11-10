@@ -24,8 +24,8 @@ app.post('/api/v1/parcels', (req, res) => {
 		createdDate: moment.now(),
 		modifiedDate: moment.now()
 	};
-	if(!parcel.weight){
-		return res.status(400).send('message: cannot be empty!');
+	if(!parcel.userId && !parcel.weight && !parcel.pickupLocation && !parcel.destination && !parcel.status){
+		return res.status(400).send('message: all fields are required!');
 	}
 	parcels.push(parcel);
 	return res.status(201).send(parcel);
@@ -53,6 +53,17 @@ app.put('/api/v1/parcels/:id/cancel', (req, res) => {
 
 	return res.status(200).send(parcel);
 });
+
+app.put('/api/v1/parcels/:id', (req, res) => {
+	const parcel = parcels.find((parcel) => parcel.id === parseInt(req.params.id));
+	if (!parcel) return res.status(404).send('The parcel with the given ID was not found');
+
+    parcel.weight = req.body.weight;
+    parcel.pickupLocation = req.body.pickupLocation;
+    parcel.destination = req.body.destination;
+    parcel.status = req.body.status;
+    return res.status(201).send(parcel);
+}); 
 
 app.listen(port, () => {
 	console.log(`app is listening on ${port}`);

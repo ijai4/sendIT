@@ -6,6 +6,7 @@ import app from '../app';
 describe('Test routes', () => {
 
 	const data = {
+		id: 1,
 		userId: 1,
 		weight: '50kg',
 		pickupLocation: 'lagos',
@@ -21,7 +22,7 @@ describe('Test routes', () => {
 				expect(res.statusCode).to.equal(201);
 			})
 			.catch((err) => {
-				expect(res.statusCode).to.equal(400);
+				expect(err.statusCode).to.equal(400);
 			});
 		});
 	});
@@ -63,6 +64,16 @@ describe('Test routes', () => {
 				expect(err.statusCode).to.equal(404);
 			});
 		});
+		/*it('should update parcel and return HTTP code 201', () => {
+			return request(app).put('/api/v1/parcels/1')
+			.send(data)
+			.then((res) => {
+				expect(res.body).to.be('object');
+			})
+			.catch((err) => {
+				expect(err.statusCode).to.equal(404);
+			});
+		});*/
 	});
 
 });
