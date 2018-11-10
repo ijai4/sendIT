@@ -37,5 +37,16 @@ describe('Users routes', () => {
 		});
 	});
 
-	
+	describe('PUT routes', () => {
+		it('should return the deleted user', () => {
+			return request(app).put('/api/v1/users/1/cancel')
+			.then((res) => {
+				expect(res.statusCode).to.equal(200);
+				expect(res.body).to.be.an('object');
+			})
+			.catch((err) => {
+				expect(err.statusCode).to.equal(404);
+			});
+		});
+	});	
 });

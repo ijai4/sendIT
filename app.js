@@ -99,6 +99,17 @@ app.get('/api/v1/users/:id/parcels', (req, res) => {
 });
 
 
+app.put('/api/v1/users/:id/cancel', (req, res) => {
+	const user = users.find((user) => user.id === parseInt(req.params.id));
+	if(!user) {
+		return res.status(404).send('The user with the given ID was not found');
+	}	
+	const index = users.indexOf(user);
+	users.splice(index, 1);
+
+	return res.status(200).send(user);
+});
+
 
 
 
