@@ -9,10 +9,12 @@ app.use(express.json());
 //section for parcel
 const parcels = [];
 
+// index route
 app.get('/', (req, res) => {
 	res.status(200).send('Welcome to sendIT');
 });
 
+//create parcel route
 app.post('/api/v1/parcels', (req, res) => {
 	const parcel = {
 		id: parcels.length + 1,
@@ -30,6 +32,7 @@ app.post('/api/v1/parcels', (req, res) => {
 	parcels.push(parcel);
 	return res.status(201).send(parcel);
 });
+
 
 app.get('/api/v1/parcels', (req, res) => {
 	res.status(200).send(parcels);
@@ -64,6 +67,40 @@ app.put('/api/v1/parcels/:id', (req, res) => {
     parcel.status = req.body.status;
     return res.status(201).send(parcel);
 }); 
+
+
+//user section
+const users = [];
+
+app.post('/api/v1/users', (req, res) => {
+	const user = {
+		id: users.length + 1,
+		username: req.body.username,
+		email: req.body.email,
+		password: req.body.password,
+		createdDate: moment.now(),
+		modifiedDate: moment.now()
+	};
+	if(!user.username && !user.email && !user.password){
+		return res.status(400).send('message: all fields are required!');
+	}
+	users.push(user);
+	return res.status(201).send(user);
+});
+
+app.get('/api/v1/users/:id/parcels', (req, res) => {
+	const allParcels = parcels;
+
+	const userParcels = allParcels.filter((parcel) => parcel.userId === parseInt(req.params.id));
+	if(!userParcels) {
+		return res.status(404).send('No parcel was found for this user');
+	}
+	return res.status(200).send(userParcels);
+});
+
+
+
+
 
 app.listen(port, () => {
 	console.log(`app is listening on ${port}`);

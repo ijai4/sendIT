@@ -3,7 +3,7 @@ import chai from 'chai';
 import { expect } from 'chai';
 import app from '../app';
 
-describe('Test routes', () => {
+describe('Parcel routes', () => {
 
 	const data = {
 		id: 1,
