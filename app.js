@@ -110,7 +110,9 @@ app.put('/api/v1/users/:id/cancel', (req, res) => {
 	return res.status(200).send(user);
 });
 
-
+app.get('/api/v1/users', (req, res) => {
+	res.status(200).send(users);
+});
 
 
 app.listen(port, () => {
