@@ -69,6 +69,11 @@ nav ul {
 
 }
 
+#wrapper img {
+	width: 100%;
+	max-height: 350px;
+}
+
 #delivered {
 	display: block;
     text-align: center;
