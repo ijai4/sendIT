@@ -36,6 +36,17 @@ describe('Users routes', () => {
 			});
 		});
 
+		it('should return success code 200 and a particular user', () => {
+			return request(app).get('/api/v1/users/1')
+			.then((res) => {
+				expect(res.statusCode).to.equal(200);
+				expect(res.body).to.be.an('object');
+			})
+			.catch((err) => {
+				expect(err.statusCode).to.equal(400);
+			});
+		});
+
 		it('should return success code 200 and all parcels by a particular user', () => {
 			return request(app).get('/api/v1/users/1/parcels')
 			.then((res) => {

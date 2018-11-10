@@ -43,7 +43,7 @@ app.get('/api/v1/parcels/:id', (req, res) => {
 	if(!parcel) {
 		return res.status(404).send('The parcel with the given ID was not found');
 	}
-	res.send(parcel);
+	res.status(200).send(parcel);
 });
 
 app.put('/api/v1/parcels/:id/cancel', (req, res) => {
@@ -111,9 +111,17 @@ app.put('/api/v1/users/:id/cancel', (req, res) => {
 });
 
 app.get('/api/v1/users', (req, res) => {
-	res.status(200).send(users);
+	return res.status(200).send(users);
 });
 
+
+app.get('/api/v1/users/:id', (req, res) => {
+	const user = users.find((user) => user.id === parseInt(req.params.id));
+	if(!user) {
+		return res.status(404).send('The user with the given ID was not found');
+	}
+	return res.status(200).send(user);
+});
 
 app.listen(port, () => {
 	console.log(`app is listening on ${port}`);
