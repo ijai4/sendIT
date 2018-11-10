@@ -12,8 +12,9 @@ describe('Test routes', () => {
 		destination: 'port harcourt',
 		status: 'delivered'
 	};
-	describe ('POST routes', () => {
-		it ('should return success code 201', () => {
+	
+	describe('POST routes', () => {
+		it('should return success code 201', () => {
 			return request(app).post('/api/v1/parcels')
 			.send(data)
 			.then((res) => {
@@ -24,8 +25,9 @@ describe('Test routes', () => {
 			});
 		});
 	});
-	describe ('GET routes', () => {
-		it ('should return success code 200 for all parcels', () => {
+	
+	describe('GET routes', () => {
+		it('should return success code 200 for all parcels', () => {
 			return request(app).get('/api/v1/parcels')
 			.then((res) => {
 				expect(res.statusCode).to.equal(200);
@@ -34,6 +36,18 @@ describe('Test routes', () => {
 				expect(err.statusCode).to.equal(404);
 			});
 		});
+		it('should return success code 200 for a particular parcel', () => {
+			return request(app).get('/api/v1/parcels/1')
+			.then((res) => {
+				expect(res.statusCode).to.equal(200);
+				expect(res.body).to.be.an('object');
+				expect(res.body).to.have.property('userId');
+			})
+			.catch((err) => {
+				expect(err.statusCode).to.equal(404);
+			});
+		});
+
 	});
 
 	

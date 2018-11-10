@@ -35,8 +35,16 @@ app.get('/api/v1/parcels', (req, res) => {
 	res.status(200).send(parcels);
 }); 
 
+app.get('/api/v1/parcels/:id', (req, res) => {
+	const parcel = parcels.find((parcel) => parcel.id === parseInt(req.params.id));
+	if(!parcel) {
+		return res.status(404).send('The parcel with the given ID was not found');
+	}
+	res.send(parcel);
+});
+
 app.listen(port, () => {
-	console.log('app is listening on', port);
+	console.log(`app is listening on ${port}`);
 });
 
 export default app;
