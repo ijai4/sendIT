@@ -31,6 +31,8 @@ describe('Test routes', () => {
 			return request(app).get('/api/v1/parcels')
 			.then((res) => {
 				expect(res.statusCode).to.equal(200);
+				expect(res.body).to.be.an('array');
+				expect(res.body.length).to.equal(1);
 			})
 			.catch((err) => {
 				expect(err.statusCode).to.equal(404);
@@ -50,7 +52,19 @@ describe('Test routes', () => {
 
 	});
 
-	
+	describe('PUT routes', () => {
+		it('should return the deleted parcel', () => {
+			return request(app).put('/api/v1/parcels/1/cancel')
+			.then((res) => {
+				expect(res.statusCode).to.equal(200);
+				expect(res.body).to.be.an('object');
+			})
+			.catch((err) => {
+				expect(err.statusCode).to.equal(404);
+			});
+		});
+	});
+
 });
 
 
