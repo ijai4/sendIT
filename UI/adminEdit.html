@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Admin Edit</title>
+	<title>Admin Edit|SENDIT</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
 		</a>
 		<nav>
 			<ul>
-				<li><a href="profile.html">Admin Profile</a></li>
+				<li><a href="admin.html">Admin Profile</a></li>
 			</ul>
 			<ul>
 				<li><a href="index.html">Sign Out</a></li>
@@ -23,7 +23,7 @@
 
 		<form>
 			<label for="destinationA">Change Status:</label>
-			<input list="status" id="destinationA" name="destinationA">
+			<input list="status" id="destinationA" name="destinationA" required>
 
 			<datalist id="status">
 				<option value="In Transit">
@@ -33,7 +33,9 @@
 			<label for="destinationB">Change Present Location:</label>
 			<input type="text" id="destinationB" name="destinationB" placeholder="present location" required><br>
 
-			<input type="submit" name="submit" value="submit">
+			<a href="admin.html">
+				<input class="signBtn" type="button" name="submit" value="submit">
+			</a>
 		</form>
 	</div>
 	

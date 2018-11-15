@@ -1,8 +1,23 @@
 body {
-	font-weight: bolder;
+	font-weight: normal;
 	font-family:  Arial, Helvetica, sans-serif;
 	padding: 0;
 	margin: 0;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 26%;
+    border-radius: 10px;
+    margin: 4em auto;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
 }
 
 
@@ -12,6 +27,9 @@ header{
 	justify-content: space-between;
 }
 
+#logo:hover {
+	color: #008080;
+}
 
 h1 {
 	color: #ccc;
@@ -30,7 +48,7 @@ nav {
 
 #logo {
 	font-weight: bolder;
-	padding: 3px 20px 30px 60px;
+	padding: 2px 20px 1px 60px;
 	color: gray;
 }
 
@@ -42,9 +60,37 @@ footer {
 	text-align: center;
 }
 
+#signUpFoot {
+	padding: 50px 0 40px 50px;
+}
 
 .foot {
-	margin-top: 130px;
+	margin-top: 100px;
+}
+
+.profileFoot {
+	margin-top: 300px;
+	position: relative;
+}
+
+.profileImg {
+	width: 30%;
+	margin: 20px 50px 0 70px;
+	border-radius: 100%;
+}
+
+.pImg h2 {
+	padding: 20px;
+	color: gray;
+}
+
+.pImg h4 {
+	padding: 5px 5px 5px 20px;
+	color: gray;
+}
+
+.adminFoot {
+	margin-top: 200px;
 }
 
 #detailsFoot {
@@ -62,21 +108,20 @@ a {
 
 nav ul {
 	list-style-type: none;
-	padding: 10px 20px 0 20px;
+	padding: 17px 20px 0 20px;
 	display: inline-flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 
 }
 
-#wrapper img {
-	width: 100%;
-	max-height: 350px;
+nav ul li a:hover {
+	color: #008080;
 }
 
-#delivered {
-	display: block;
-    text-align: center;
+#wrapper img  {
+	width: 100%;
+	max-height: 350px;
 }
 
 
@@ -101,16 +146,47 @@ form label{
 }
 
 
+.signBtn {
+	background-color: #008080;
+	color: #fff;
+}
+
+form label{
+	display: block;
+	padding-top: 20px;
+}
+
+
+#create {
+	margin: 20px 0 0 0;
+}
+
+
+#space {
+	padding: 70px 50px 1px 50px;
+}
+
+
 .common {
 	display: block;
     text-align: center;
+    padding: 150px 50px 1px 50px;
 }
 
-.profile {
-	padding: 20px 30px 20px 40px;
-	text-align: center;
+#signUpSpace {
+	padding: 60px 50px 1px 50px;
 }
 
+#profile {
+	padding: 50px;
+	margin-left: 380px;
+}
+
+#file {
+	padding: 50px;
+	margin-left: 120px;
+
+}
 
 .parcelDelivery {
 	padding: 20px 30px 20px 40px;
@@ -138,8 +214,80 @@ form label{
 
 #welcome p {
 	text-align: center;
-	font-family: "Courier New", Courier, monospace
+	font-family: "Courier New", Courier, monospace;
 	font-size: xx-large;
 	padding: 15px 10px;
 	color: gold;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+td, th {
+    border: 1px solid beige;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: beige;
+}
+
+#dash {
+	width: 20%;
+	height: 100vh;
+	background-color: #f1efef;
+	position: absolute;
+}
+
+.newBtn {
+	background-color: #008080;
+	color: white;
+	padding: 20px;
+	margin-left: 20px;
+	border-radius: 7px;
+}
+
+.green {
+	background-color: #008080;
+	border-radius: 7px;
+	color: white;
+	padding: 10px;
+	font-size: 1em;
+}
+
+.red {
+	background-color: red;
+	border-radius: 7px;
+	color: white;
+	padding: 10px;
+	font-size: 1em;
+}
+
+.pop {
+	background-color: rgba(0,0,0,0.5);
+	z-index: 8;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.pop:target {
+	display: block;
+}
+
+.pop-area {
+	position: absolute;
+	top: 50%;
+	left: 50%; 
+	transform: translate(-50%, -50%);
+	background-color: beige;
+	padding: 50px;
+	border-radius: 7px;
 }

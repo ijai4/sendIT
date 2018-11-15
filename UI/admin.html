@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Admin</title>
+	<title>Admin|SENDIT</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
 		</a>
 		<nav>
 			<ul>
-				<li><a href="">Admin Profile</a></li>
+				<li><a href="admin.html">Admin Profile</a></li>
 			</ul>
 			<ul>
 				<li><a href="index.html">Sign Out</a></li>
@@ -19,40 +19,50 @@
 		</nav> 
 	</header>
 	<section>
-		<div class="profile">
-			<form>
-				<h1>PARCEL DELIVERY ORDERS</h1>
-				<div class="parcelDelivery">
-					<input type="checkbox"> Parcel delivery order 1: In Transit  <a href="adminEdit.html">Edit</a>
-				</div>
-				<div class="parcelDelivery">
-					<input type="checkbox"> Parcel delivery order 2: In Transit  <a href="adminEdit.html">Edit</a>
-				</div>
-				<div class="parcelDelivery">
-					<input type="checkbox"> Parcel delivery order 3: In Transit  <a href="adminEdit.html">Edit</a>
-				</div>
-				<div class="parcelDelivery">
-					<input type="checkbox"> Parcel delivery order 4: In Transit  <a href="adminEdit.html">Edit</a>
-				</div>
-				<div class="parcelDelivery">
-					<input type="checkbox"> Parcel delivery order 5: In Transit  <a href="adminEdit.html">Edit</a>
-				</div>
-				<div class="parcelDelivery">
-					<input type="checkbox"> Parcel delivery order 6: In Transit  <a href="adminEdit.html">Edit</a>	
-				</div>
-				<div class="parcelDelivery">
-					<input type="checkbox"> Parcel delivery order 7: In Transit  <a href="adminEdit.html">Edit</a>
-				</div>
-				<div class="parcelDelivery">
-					<input type="checkbox"> Parcel delivery order 8: In Transit  <a href="adminEdit.html">Edit</a>
-				</div>
-				<div class="parcelDelivery">
-					<input type="checkbox" checked="checked">Parcel delivery order 9: Delivered  <a href="">Details</a> 
-				</div>
-			</form>
+		<div>
+				<div id="file">
+						<h2>PARCEL DELIVERY ORDERS</h2>
+						<table>
+							<tr>
+								<th>Package Type</th>
+								<th>Weight</th>
+								<th>Pickup Location</th>
+								<th>Destination</th>
+								<th>Status</th>
+							</tr>
+							<tr>
+								<td>Cell phone</td>
+								<td>1kg</td>
+								<td>Lagos</td>
+								<td>Port Harcourt</td>
+								<td>In Transit | <a href="adminEdit.html">Edit</a></td>
+							</tr>
+							<tr>
+								<td>Laptop</td>
+								<td>4kg</td>
+								<td>Abuja</td>
+								<td>Jos</td>
+								<td>In Transit | <a href="adminEdit.html">Edit</a></td>
+							</tr>
+							<tr>
+								<td>Documents</td>
+								<td>2kg</td>
+								<td>Calabar</td>
+								<td>Uyo</td>
+								<td>In Transit | <a href="adminEdit.html">Edit</a></td>
+							</tr>
+							<tr>
+								<td>Books</td>
+								<td>3kg</td>
+								<td>Lagos</td>
+								<td>Port Harcourt</td>
+								<td>Delivered</td>
+							</tr>
+						</table>
+					</div>		
 		</div>
 	</section>
-	<footer>
+	<footer class="adminFoot">
 			<a href="index.html">Home</a> | <a href="">About</a> | <a href="">Services</a> | <a href="">Contact</a><br />
 			&copy; 2018 SENDIT. All Rights Reserved.
 	</footer>
