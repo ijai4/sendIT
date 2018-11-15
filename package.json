@@ -1,0 +1,30 @@
+{
+  "name": "sendit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-rallycoding": "^3.2.0",
+    "eslint-config-recommended": "^4.0.0",
+    "eslint-plugin-import": "^2.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ijai4/sendIT.git"
+  },
+  "author": "Ijai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ijai4/sendIT/issues"
+  },
+  "homepage": "https://github.com/ijai4/sendIT#readme",
+  "directories": {
+    "test": "test"
+  }
+}

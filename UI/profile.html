@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My profile</title>
+	<title>My profile|SENDIT</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
@@ -19,25 +19,130 @@
 		</nav> 
 	</header>
 	<section>
-		<div class="profile">
-			<form>
-				<h1>PARCEL DELIVERY ORDERS</h1>
-				<div class="parcelDelivery">
-					<input type="checkbox"> Parcel delivery order 1: In Transit  <a href="changeDest.html">Edit</a> | <a href="">Cancel</a>
+		<div>
+			<div class="pop" id="cancel">
+				<div class="pop-area">
+					<p>Do you certainly want to cancel?</p>
+					<button class="green"><a href="profile.html"><strong>Yes</strong></a></button>
+					<button class="red"><a href="#"><strong>No</strong></a></button>
 				</div>
-				<div class="parcelDelivery">
-					<input type="checkbox"> Parcel delivery order 2: In Transit  <a href="changeDest.html">Edit</a> | <a href="">Cancel</a>
+			</div>
+			
+			<div class="pop" id="deliver">
+				<div class="pop-area">
+					<p>
+						Package Type: Cell phone
+					</p>
+					<p>
+						Weight: 1kg
+					</p>
+					<p>
+						Pickup Location: Lagos
+					</p>
+					<p>
+						Destination: Port Harcourt
+					</p>
+					<p>
+						Status: In Transit
+					</p>
+					<button class="green"><a href="profile.html">Close</a></button>
 				</div>
-				<div class="parcelDelivery">
-					<input type="checkbox"> Parcel delivery order 3: In Transit  <a href="changeDest.html">Edit</a> | <a href="">Cancel</a>
+			</div>
+			<div class="pop" id="deliver1">
+				<div class="pop-area">
+					<p>
+						Package Type: Laptop
+					</p>
+					<p>
+						Weight: 4kg
+					</p>
+					<p>
+						Pickup Location: Abuja
+					</p>
+					<p>
+						Destination: Jos
+					</p>
+					<p>
+						Status: In Transit
+					</p>
+					<button class="green"><a href="profile.html">Close</a></button>
 				</div>
-				<div class="parcelDelivery">
-					<input type="checkbox" checked="checked"> Parcel delivery order 9: Delivered  <a href="details.html">Details</a> 
 				</div>
-			</form>
+				<div class="pop" id="deliver2">
+					<div class="pop-area">
+						<p>
+							Package Type: Documents
+						</p>
+						<p>
+							Weight: 2kg
+						</p>
+						<p>
+							Pickup Location: Calabar
+						</p>
+						<p>
+							Destination: Uyo
+						</p>
+						<p>
+							Status: In Transit
+						</p>
+						<button class="green"><a href="profile.html">Close</a></button>
+					</div>
+				</div>
+			<div id="dash">
+				<div class="pImg">
+					<h2>My Profile</h2>
+					<img src="https://static1.squarespace.com/static/58744e3b1e5b6c6780695682/t/5a974e2a419202f909ee69c8/1519872116983/hunter-johnson-222001-unsplash.jpg" class="profileImg">
+					<h4>Number of Parcels: 4</h4>
+					<h4>Number of Delivered Parcels: 1</h4>
+					<h4>Number of Parcels in Transit: 3</h4>
+				</div>
+				<div>
+					<button class="newBtn"><a href="createParcel.html"><strong>CREATE NEW  PARCEL ORDERS</strong></a></button>
+				</div>
+			</div>
+			<div id="profile">
+				<h2>PARCEL DELIVERY ORDERS</h2>
+				<table>
+					<tr>
+						<th>Package Type</th>
+						<th>Weight</th>
+						<th>Pickup Location</th>
+						<th>Destination</th>
+						<th>Status</th>
+					</tr>
+					<tr>
+						<td>Cell phone</td>
+						<td>1kg</td>
+						<td>Lagos</td>
+						<td>Port Harcourt</td>
+						<td>In Transit | <a href="changeDest.html">Edit</a> | <a href="#cancel">Cancel</a> | <a href="#deliver">View more</a></td>
+					</tr>
+					<tr>
+						<td>Laptop</td>
+						<td>4kg</td>
+						<td>Abuja</td>
+						<td>Jos</td>
+						<td>In Transit | <a href="changeDest.html">Edit</a> | <a href="#cancel">Cancel</a> | <a href="#deliver1">View more</a></td>
+					</tr>
+					<tr>
+						<td>Documents</td>
+						<td>2kg</td>
+						<td>Calabar</td>
+						<td>Uyo</td>
+						<td>In Transit | <a href="changeDest.html">Edit</a> | <a href="#cancel">Cancel</a> | <a href="#deliver2">View more</a></td>
+					</tr>
+					<tr>
+						<td>Books</td>
+						<td>3kg</td>
+						<td>Lagos</td>
+						<td>Port Harcourt</td>
+						<td>Delivered | <a href="details.html">View more</a>
+					</tr>
+				</table>
+			</div>
 		</div>
 	</section>
-	<footer class="foot">
+	<footer class="profileFoot">
 			<a href="index.html">Home</a> | <a href="">About</a> | <a href="">Services</a> | <a href="">Contact</a><br />
 			&copy; 2018 SENDIT. All Rights Reserved.
 	</footer>
