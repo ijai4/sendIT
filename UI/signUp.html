@@ -16,37 +16,35 @@
 			<ul>
 				<li><a href="signUp.html">Sign Up</a></li>
 			</ul>
-			<ul>
-				<li><a href="profile.html">My Profile</a></li>
-			</ul>
 		</nav> 
 	</header>
 	<section>
-		<div class="common">
+		<div id="signUpSpace" class="common">
 		<form>
 			<h1>Sign up</h1>
 
 			<label for="name">Name:</label>
-			<input type="text" id="name" name="user_name" placeholder=" Enter Name" required>
+			<input type="text" id="name" name="user_name" placeholder="Enter Name" required>
 
 			<label for="email">Email:</label>
-			<input type="text" id="email" name="user_email" placeholder=" Enter Email" required>
+			<input type="text" id="email" name="user_email" placeholder="Enter Email" required>
 
 			<label for="password">Password:</label>
 			<input type="password" id="password" name="user_password
 			" placeholder=" Enter Password" required><br>
-			<input type="submit" name="submit" value="Sign Up">
+			<a href="profile.html">
+				<input class="signBtn" type="button" name="submit" value="Sign Up">
+			</a>
+			
 			<p>
 				Already have an account? <a href="signIn.html">Sign in</a>
 			</p>
 	    </form>
 	</div>
 	</section>
-	<footer>
-		<div id="footer">
+	<footer id="signUpFoot">
 			<a href="index.html">Home</a> | <a href="">About</a> | <a href="">Services</a> | <a href="">Contact</a><br />
 			&copy; 2018 SENDIT. All Rights Reserved.
-		</div>
 	</footer>
 </body>
 </html>
